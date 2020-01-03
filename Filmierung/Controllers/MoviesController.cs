@@ -25,7 +25,8 @@ namespace Filmierung.Controllers
         // GET: Movies/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var movieToShow = moviesList.Where(m => m.Id == id).FirstOrDefault();
+            return View(movieToShow);
         }
 
         // GET: Movies/Create
