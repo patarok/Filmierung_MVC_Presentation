@@ -1,1 +1,3 @@
 Useless comment to show off how documenting and commiting with comments works.
+Now i have added another line...
+And then a third. Ha!
