@@ -1,3 +1,4 @@
-Useless comment to show off how documenting and commiting with comments works.
+Useless stuff to show off how documenting and commiting with comments works.
 Now i have added another line...
-And then a third. Ha!
+And then a third.
+Added one more and removed a bit. guess what!
