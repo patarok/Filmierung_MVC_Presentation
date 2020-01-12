@@ -24,6 +24,7 @@ namespace Filmierung
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap_sketchy.css",
                       "~/Content/site.css"));
         }
     }
