@@ -1,0 +1,21 @@
+body {
+background-color: whitesmoke;
+min-width: 200px;
+}
+
+.body-content{
+background-color: whitesmoke;
+}
+
+//also muss auf die Ueberschrift der Hauptseite angewandt werden... da ansonsten zuwenig Platz zwischen Ueberschrift und Navbar bzw. Shared-Bereich
+// entweder auf den Jumbotron oder auf die Ueberschrift. So it is 
+// either:
+
+.maincaption{padding: 2vw;}
+
+//a class that gets applied to the heading itself or to the jumbotron
+//considering calling it standclear, standclear or repel
+//or:
+
+.ledge{margin-top: 6vw;}
+// since this is what a vorsprung could be called in english.

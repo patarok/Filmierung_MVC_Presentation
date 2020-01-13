@@ -1,47 +1,87 @@
 ﻿<!DOCTYPE html>
-<html>
+<html style="overflow:scroll">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Meine ASP.NET-Anwendung</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	@*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>@ViewBag.Title - Meine ASP.NET-Anwendung</title>
+
+	@*ASP.net*@
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+
+	@*<link rel="stylesheet" href="css/reset.css">*@
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+	<link rel="stylesheet" href="css/overlay.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+	<style>
+		.navbar-collapse.in {
+	display: block !important; /*maybe important for reveal but is it important for pages not displaying presentations?*/
+} /*FIXING PROBLEM IN CAUSE OF BOOTSTRAP-VERSION MISMATCH... THEME IS 4.4 VS2017/2019 ASP.NET SEEMS TO DEFAULT TO 3.3*/
+	</style>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("FILMIERUNG", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
+	<div class="navbar navbar-inverse navbar-fixed-top ledge">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				@Html.ActionLink("FILMIERUNG", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li>@Html.ActionLink("Startseite", "Index", "Home")</li>
 
-                    <li>@Html.ActionLink("Filmverwaltung", "Administrate", "Home")</li>
+					<li>@Html.ActionLink("Filmverwaltung", "Administrate", "Home")</li>
 
-                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+					<li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
 
-                    <li>@Html.ActionLink("Info", "About", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Meine ASP.NET-Anwendung</p>
-        </footer>
-    </div>
+					<li>@Html.ActionLink("Info", "About", "Home")</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container body-content">
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; @DateTime.Now.Year - Meine ASP.NET-Anwendung</p>
+		</footer>
+	</div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
 </body>
 </html>
