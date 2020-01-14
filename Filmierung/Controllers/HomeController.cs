@@ -34,5 +34,17 @@ namespace Filmierung.Controllers
             return View();
         }
 
+        public ActionResult Presentation()
+        {
+            ViewBag.Message = "Präsentation des MVC-Modells";
+
+            return View();
+
+        }
+
+        public ActionResult Specific()
+        {
+            return View("~/Views/Specific.html");
+        }
     }
 }

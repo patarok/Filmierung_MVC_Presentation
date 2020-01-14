@@ -5,6 +5,7 @@ min-width: 200px;
 
 .body-content{
 background-color: whitesmoke;
+min-width: 200px;
 }
 
 //also muss auf die Ueberschrift der Hauptseite angewandt werden... da ansonsten zuwenig Platz zwischen Ueberschrift und Navbar bzw. Shared-Bereich

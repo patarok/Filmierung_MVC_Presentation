@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	@*<meta name="viewport" content="width=device-width, initial-scale=1.0">*@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>@ViewBag.Title - Meine ASP.NET-Anwendung</title>
@@ -52,6 +53,8 @@
 					<li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
 
 					<li>@Html.ActionLink("Info", "About", "Home")</li>
+
+					<li>@Html.ActionLink("Präsentation", "Presentation", "Home")</li>
 				</ul>
 			</div>
 		</div>
@@ -60,7 +63,7 @@
 		@RenderBody()
 		<hr />
 		<footer>
-			<p>&copy; @DateTime.Now.Year - Meine ASP.NET-Anwendung</p>
+			<p>&copy; @DateTime.Now.Year - ASP.net-MVC / vom Muster zur Anwendung</p>
 		</footer>
 	</div>
 
