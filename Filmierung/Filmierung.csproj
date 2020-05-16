@@ -198,6 +198,7 @@
     <Content Include="css\theme\template\theme.scss" />
     <Content Include="plugin\markdown\example.md" />
     <Content Include="plugin\multiplex\package.json" />
+    <None Include=".bin\node.cmd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

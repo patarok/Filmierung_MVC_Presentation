@@ -11,6 +11,7 @@
 	@*ASP.net*@
 	@Styles.Render("~/Content/css")
 	@Scripts.Render("~/bundles/modernizr")
+	@Scripts.Render("~/bundles/custom")
 
 	@*<link rel="stylesheet" href="css/reset.css">*@
 	<link rel="stylesheet" href="css/reveal.css">
@@ -67,8 +68,8 @@
 		</footer>
 	</div>
 
-	@Scripts.Render("~/bundles/jquery")
-	@Scripts.Render("~/bundles/bootstrap")
+	@Scripts.Render("bundles/jquery")
+	@Scripts.Render("bundles/bootstrap")
 	@RenderSection("scripts", required: false)
 
 	<script src="js/reveal.js"></script>

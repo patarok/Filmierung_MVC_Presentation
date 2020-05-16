@@ -1,5 +1,5 @@
 ﻿@{
-        Layout = null;
+    Layout = null;
     }
 
 @{
@@ -28,9 +28,9 @@
 
     <title>reveal.js</title>
 
-    <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/reveal.css">
-    <link rel="stylesheet" href="../../css/theme/white.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css">
@@ -67,7 +67,7 @@
         </div>
     </div>
 
-    <script src="/js/reveal.js"></script>
+    <script src="js/reveal.js"></script>
 
     <script>
 			// More info about config & dependencies:
@@ -79,18 +79,18 @@
 
             // Skalierung kann begrenzt werden
             minScale: 0.2,
-            maxScale: 1.0
+            maxScale: 1.0,
 
 
             //THEMES
-            theme: 'default' //default THEMA
+            theme: 'default', //default THEMA
 
             // Abhaengigkeiten von REVEAL.js zu markdown, notes und highlight
 				dependencies: [
-					{ src: '/plugin/markdown/marked.js' },
-					{ src: '/plugin/markdown/markdown.js' },
-					{ src: '/plugin/notes/notes.js', async: true },
-					{ src: '/plugin/highlight/highlight.js', async: true }
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
 				]
 			});
     </script>
