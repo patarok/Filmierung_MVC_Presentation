@@ -20,6 +20,7 @@ namespace Filmierung
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/custom").Include("~/js/reveal.js"));
+            // die Tilden !!!>>>'~'<<<!!! bei der Pfadangabe von Resourcen, scheinen bei Einbettung in ein ASP.NET MVC Projekt unheimlich wichtig zu sein!
 
 
 
@@ -29,7 +30,9 @@ namespace Filmierung
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap_sketchy.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/css/reset.css",
+                      "~/css/reveal.css"));
         }
     }
 }

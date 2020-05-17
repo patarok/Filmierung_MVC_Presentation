@@ -28,15 +28,15 @@
 
     <title>reveal.js</title>
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/white.css">
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/css/reveal.css">
+    <link rel="stylesheet" href="~/css/theme/league.css">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/monokai.css">
 
     <!-- Printing and PDF exports -->
-    <script>
+    <script type="text/javascript">
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
@@ -49,50 +49,24 @@
         <div class="slides">
             <section>Slide 1</section>
             <section>Slide 2</section>
-            <section id="transitions">
-                Slide 3 / Transitions
-                <p>Folgende Uebergaenge koennen gewaehlt werden:</p>
-                <br/>
-                <a href="?transition=cube#/transitions">Cube</a>
-                <a href="?transition=page#/transitions">Page</a>
-                <a href="?transition=concave#/transitions">Concave</a>
-                <a href="?transition=zoom#/transitions">Zoom</a>
-                <a href="?transition=linear#/transitions">Linear</a>
-                <a href="?transition=fade#/transitions">Fade</a>
-                <a href="?transition=none#/transitions">None</a>
-                <a href="?#/transitions">Default</a>
-                
-            </section>
-
         </div>
     </div>
 
-    <script src="js/reveal.js"></script>
+    <script src="~/js/reveal.js"></script>
 
     <script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
         Reveal.initialize({
-
-
-
-            // Skalierung kann begrenzt werden
-            minScale: 0.2,
-            maxScale: 1.0,
-
-
-            //THEMES
-            theme: 'default', //default THEMA
-
-            // Abhaengigkeiten von REVEAL.js zu markdown, notes und highlight
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
+            hash: true,
+            dependencies: [
+                { src: '~/plugin/markdown/marked.js' },
+                { src: '~/plugin/markdown/markdown.js' },
+                { src: '~/plugin/highlight/highlight.js' },
+                { src: '~/plugin/notes/notes.js', async: true }
+            ]
+        });
     </script>
 </body>
 </html>
