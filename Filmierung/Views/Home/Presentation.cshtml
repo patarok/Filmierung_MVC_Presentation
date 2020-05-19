@@ -18,55 +18,590 @@
         </div>
     </body>
     </html>*@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>MVC - ein Architektur- und Entwurfsmuster</title>
+
+        <meta
+            name="description"
+            content="A pattern for User-Applications"
+        />
+        <meta name="author" content="Hakim El Hattab" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+        />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="~/css/reset.css" />
+    <link rel="stylesheet" href="~/css/reveal.css" />
+    <link rel="stylesheet" href="~/css/theme/league.css" id="theme" />
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/monokai.css" /> <!--TODO: shouldnt we also use Tilde here?-->
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement("link");
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi)
+                ? 'css/print/pdf.css'
+                : 'css/print/paper.css';
+            document.getElementsByTagName("head")[0].appendChild(link);
+        </script><!--TODO: shouldnt we also use Tilde here?-->
+
+        <!--[if lt IE 9]>
+            <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <!--first-->
+                <section>
+                    <h1>MVC</h1>
+                    <h3>Das MVC Software Design Pattern</h3>
+                    <p>
+                        <small
+                            >Created by
+                            <a href="http://hakim.se">Peter Patoschka</a> and
+                            <a href="https://github.com/patarok"
+                                >Joe Google</a
+                            ></small
+                        >
+                    </p>
+                <aside class="notes">
+                            Willkommen bei meiner Praesentation zum MVC-Architektur bzw. Entwurfsmuster!
+                </aside>
+                </section>
+
+                <!--second-->
+                <section>
+                    <h2>WAHR/FALSCH</h2>
+                    <h3>
+                        Marvel VS. Capcom -
+                        <span class="fragment highlight-red">falsch</span><br />
+                        ASP.NET MVC isn't true "MVC" -
+                        <span class="fragment highlight-red">falsch</span>
+                    </h3>
+                </section>
+
+                <!--third-->
+                <section>
+                    <h3>
+                        Only MVC is MVC -
+                        <span class="fragment highlight-green">richtig</span>
+                    </h3>
+                </section>
+
+                <!--fourth-->
+                <section>
+                    <h3>
+                        -Konzept -Architekturmuster... * bestimmen grundlegende
+                        +Organisation +Interaktion
+                    </h3>
+                </section>
+
+                <section>
+                    <h2>Ursprung</h2>
+                    <h3>
+                        SIMULA || SMALLTALK 70' MVC ⇹ MONOLITHISCH
+                    </h3>
+                    <h4>Monolitische Anfaenge:</h4>
+                    <p>
+                        - HomeComputer-Aera Programme <br />
+                        -> auf "C64, Atari 800XL, Amiga" bspw. in BASIC
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Das Muster:</h3>
+                    <h4>MODEL<br />&emsp;VIEW<br />&emsp;&emsp;CONTROLLER</h4>
+                    <p>
+                        -> Wiederverwendbarkeit <br />
+                        -> AutoSync <br />
+                        -> Scalable
+                    </p>
+                </section>
+                <!--nested vertical slides -->
+                <section>
+                    <h2>HINTERGRUNDWISSEN</h2>
+                    <h3>SoC</h3>
+                    <!--eventuell in einen Vertikalen-->
+                    <h4>Separation of Concerns</h4>
+                    <p>
+                        - Separierte Belange <br />
+                        *bzw. Veranwortung od. Zustaendigkeit
+                    </p>
+                    <h3>SRP</h3>
+                    <!--eventuell in einen Vertikalen-->
+                    <h4>Single Responsibility Principle</h4>
+                    <p>
+                        - Alleinige Verantwortung <br />
+                        &ensp;*ein Modul &emsp;-> alleinige Verantwortung <br />
+                        &emsp;&ensp;ueber einen Funktionalitaetsteil
+                    </p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>
+                            BESTAND<span class="fragment">T</span
+                            ><span class="fragment"></span>E<span
+                                class="fragment"
+                                >I</span
+                            ><span class="fragment">L</span
+                            ><span class="fragment">E</span>
+                        </h2>
+                        <p>Aufteilung in:</p>
+                        <br />
+                        <a href="#" class="navigate-down">
+                            <img
+                                width="178"
+                                height="238"
+                                data-src="DUMUSSTNOCHDENPFADANGEBEN"
+                                alt="Down arrow"
+                            />
+                        </a>
+                    </section>
+                    <section>
+                        <h2>MODEL</h2>
+                        <p>
+                            -WISSEN <br />
+                            -STRUKTURIERTE DATEN <br />
+                            &ensp;*Objekt<br />
+                            &ensp;*Struktur aus mehreren Objekten
+                        </p>
+                        <p>
+                            BIETET: <br />
+                            Kommunikation: MODEL -> VIEW<br />
+                            Business Logic(Modell-Logik/Methoden)
+                        </p>
+                    </section>
+                    <section>
+                        <h2>VIEW</h2>
+                        <p>
+                            -RAEPRESENTATION <br />
+                            -STRUKTURIERTE ANSICHT der DATEN <br />
+                            &ensp;*...hebt hervor<br />
+                            &ensp;*...blendet aus<br />
+                            &ensp;*...sendet Nachrichten
+                        </p>
+                        <p>
+                            IST: <br />
+                            AnsichtsFilter<br />
+                            UserInterface
+                        </p>
+                        <pre>
+"Extended MVC" >> ObserverRolle[MODELL]
+				           Dynamik bei ASP.NET bspw. mittels JS od. BLAZOR</pre
+                        >
+                    </section>
+                    <section>
+                        <h2>CONTROLLER</h2>
+                        <p>
+                            -VERBINDUNG <br />
+                            -INFORMATIONSAUFBEREITUNG<br />
+                            &ensp;*Schnittstelle<br />
+                            &ensp;*Uebersetzer/Umwandler
+                        </p>
+                        <p>
+                            BIETET: <br />
+                            Input-Handling<br />
+                            Application-Logik<br />
+                            CRUD-Logic
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>ENTSTEHUNGSGESCHICHTE</h2>
+                    <p>
+                        -"XEROX PARC"-Konzept 'DynaBook'- <br />
+                        Produktanforderung: <br />
+                        'user-oriented organisation of requirements' erste
+                        Einteilung: 'Actions, Models, DynaBook-System' erste
+                        dezidierte Arbeit zu MVC: "A Cookbook for Using the
+                        Model-View-Controller User Interface Paradigm in
+                        Smalltalk -80
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Zwischenschluss vor der CIS-Dur</h2>
+                    <p>
+                        MVC BIETET MODULARITAET DURCH AUFTEILUNG IN
+                        VERANTWORTUNGSBEREICHE.
+                    </p>
+                    <p>MVC IST <b>ARCHITEKTUR</b>-MUSTER</p>
+                    <p>
+                        WAS KOMPLEX KLINGEN KANN, VEREINFACHT
+                        ANWENDUNGSENTWICKLUNG.
+                    </p>
+                </section>
+
+                <section>
+                    EINBLICKE:
+                    <!--iframe?-->
+                    http://folk.uio.no/trygver/1979/sysreq/SysReq.pdf
+                    <!--eventuell Animation-->
+                    <!--Apple MVC Concept-->
+                    <!--RubyOnRails-Seite-->
+                </section>
+
+                <section>
+                    <h2>ASP.NET-MVC</h2>
+
+                    <!--SELFCALL to -> Filmierung.APP-->
+
+                    <section>
+                        <!--viewbag-->
+                        <h2>
+                            <span class="fragment highlight-red"
+                                >VIEWBAG-Problematik</span
+                            >
+                        </h2>
+                        <pre><code class="hljs" data-trim data-line-numbers="1|4|7|8|4,8">
+        //controller
+        public ActionResult Index()   
+        {  
+            ViewBag.EmployeeData = getEmplyees(x => x.DOB > DateTime.Now);  
+        }
+          
+        // view  
+        @@foreach(var employee in ViewBag.EmployeeData)  
+        {  
+        // using data;
+        // for showing data;  
+        }
+					</code></pre>
+                    </section><!--viewbag end-->
+                    
+                    <section><!--business-logic-->
+                        
+                        <h2>
+                            <span class="fragment highlight-red">BusinessLogic-Problematik</span>
+                        </h2>
+                        <pre><code class="hljs" data-trim data-line-numbers="1|4|1-9">
+        //controller
+            Public ActionResult Save(Employee model)  
+            {  
+                If(ModelState.IsValid)   
+                {  
+                    _dbContext.Employees.Add(model)  
+                }  
+                Return RedirectToAction(“Success”);  
+            }
+					</code></pre>
+                    </section> <!--business-logic end-->
+                    <section><!--RAZOR-->   
+                        <h2>
+                            <span class="fragment highlight-red"
+                                >RAZOR-Problematik</span
+                            >
+                        </h2>
+                        <!--vorsicht kontrollieren ob es funktionier einen highlighting-step freizulassen-->
+                        <pre><code class="hljs" data-trim data-line-numbers="1||2-9">
+        //view
+        @@if(user.Role == ”Admin”)  
+        {  
+            //  dann setze oder zeige Admin-Usern dies oder das
+        }  
+        @@else   // oder zeige den anderen
+        {  
+            //  normalen Content
+        }  
+					</code></pre>
+                    </section> <!--RAZOR end-->
+                    
+                    
+                    
+                </section> <!--ASP.NET Vorstellung Ende-->
+                
+                <section><!--Resumé-->
+                    <h2>.WIEDERHOLUNG.</h2>
+                    <h3 class="fragment">MVC</h3>
+                    <p><span class="fragment">ist </span><span class="fragment">Strukturvorgabe </span></p>
+                    <span class="fragment">
+                    <p>um</p>
+                    <p>Programmbereiche</p></span>
+                    <p><span class="fragment">in</span><br>
+                    <span class="fragment highlight-red">M</span><span class="fragment highlight-green">V</span><span class="fragment highlight-blue">C</span><br>
+                    <span class="fragment">SO GUT WIE MOEGLICH</span><br>
+                    und<br>
+                    <span class="fragment">EINDEUTIG</span><br>
+                    voneinander zu trennen.
+                    </p>
+                </section>
+                <!--pause bildschirm--> <!--Erklaerung zur Dehnbarkeit des Begriffs-->
+                <section>
+                    <h2>WEITERE MUSTER:</h2>
+                    
+                    <section> <!--mvp-->
+                    <h2>MVP</h2>
+                    <p>
+                    <span class="fragment">ist ein Ansatz zur noch strengeren Trennung der Bereiche.</span>
+                    <span class="fragment">Model und View kommunizieren exklusiv ueber den</span> <span class="fragment"> Presenter.</span>
+                    </p>
+                    </section>
+                    
+                    <section> <!--EIC-->
+                    <h2>EBC</h2>
+                    <h3 class="fragment">EIC/Entity-Interface-Control</h3>
+                    <p>or</p>
+                    <h3>EBC/Entity-Boundary-Control</h3>
+                    <p>
+                    <span class="fragment">Unterschied zu MVC:</span>
+                    <span class="fragment">- Controller beherbergt Business-Logic</span><br><span class="fragment">- Interface/Boundary verarbeitet User-Input.</span>
+                    </p>
+                    </section>
+                    
+                    <section> <!--PAC-->
+                    <h2>PAC</h2>
+                    <h3 class="fragment">Presentation-Abstraction-Control</h3>
+                    <p>
+                    <span class="fragment">- Anforderungen </span><span class="fragment">-></span>
+                    <span class="fragment">Agenten</span><br><span class="fragment">- Jeder Agent:</span><br>
+                    <span class="fragment highlight-green">P</span><span class="fragment">resenter, </span><span class="fragment highlight-red">A</span><span class="fragment">bstraction, </span><span class="fragment highlight-green">C</span><span class="fragment">Control</span>
+                    </p>
+                    </section>
+                    
+                    <section> <!--MVVM-->
+                    <h2>MVVM</h2>
+                    <h3 class="fragment">Model-View-ViewModel</h3>
+                        <p class="fragment highlight-red">und nicht</p>
+                    <h3 class="highlight-blue">Model-View-View-Model</h3>
+                    <p>
+                    <span class="fragment"></span>
+                    <span class="fragment"></span>
+                    <span class="fragment">Vorteil:</span>
+                    <span class="fragment">Rollentrennung -> </span><br>
+                    <span class="fragment">UX/UI-Designer</span>
+                    <span class="fragment">|</span>
+                    <span class="fragment">UI/Logic-Programmer</span>
+                    </p>
+                    </section>
+                    
+                </section>
+                
+                   <!--section other frameworks than ASP.NET MVC-->
+                    <section
+                        data-background="https://media.giphy.com/media/a29uUCryHZkPe/giphy.gif"
+                    >
+                        <h3>... bevor wir den Rahmen sprengen</h3>
+                        <section data-background="https://cdn.iwastesomuchtime.com/822012231911whenmygirlfriendsaysweneedtotalk.gif">
+                            <h2>andere MVC FRAMEWORKS:</h2>
+                            
+                        </section>
+                        
+                <section
+                    data-background-iframe="https://laravel.com"
+                    data-background-interactive
+                >
+                    <div
+                        style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;"
+                    >
+                        <h2>Laravel</h2>
+                        <p>
+                            Offers: modular packaging system with a dedicated dependency manager, different ways for accessing relational databases, utilities that aid in application deployment and maintenance, and its orientation towards "syntactic sugar".
+                        </p>
+                    </div>
+                </section>
+                <section
+                    data-background-iframe="https://rubyonrails.org/"
+                    data-background-interactive
+                >
+                    <div
+                        style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;"
+                    >
+                        <h2>Ruby-On-Rails</h2>
+                        <p>
+                            ...is written in Ruby(scripting language comparable to Python) and offers a modular packaging system with a dedicated dependency manager, different ways for accessing relational databases, utilities that aid in application deployment and maintenance, and its orientation towards "syntactic sugar".
+                        </p>
+                    </div>
+                </section>
+                <section
+                    data-background-iframe="https://sailsjs.com"
+                    data-background-interactive
+                >
+                    <div
+                        style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;"
+                    >
+                        <h2>Sails.JS</h2>
+                        <p>
+                            ...is a Realtime MVC for Node.js
+                        </p>
+                    </div>
+                </section>
+                <section
+                    data-background-iframe="https://www.djangoproject.com/"
+                    data-background-interactive
+                >
+                    <div
+                        style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;"
+                    >
+                        <h2>DJANGO</h2>
+                        <p>
+                            ...folgt eigentlich dem MTV, <br>
+                            also ModelTemplateView Muster, wird aber im Kern auch als
+                            MVC-Framework betrachtet.
+                        </p>
+                    </div>
+                </section>
+                </section>
+                
+                <section>
+                    <p><span class="fragment">- ebenfalls eher Strukturvorgaben</span>
+                    <p><span class="fragment">- schwierig von MVC zu unterscheiden</span>
+                    <p><span class="fragment">- RAD</span>
+                    </p>          
+                       <section>
+                          <h2 class="fragment">AMBIVALENZ<br>in<br>MVC</h2>
+                          <p><span class="fragment">- Gesamtkonzept</span>
+                          <p><span class="fragment">- Teilsystem</span>
+                          <p><span class="fragment">- Grundidee</span>
+                          
+                           
+                       </section>
+                </section>
+                
+                <section>
+                    <span class="fragment"><h2>DANKE!</h2></span>
+                    <span class="fragment"><p>fuer Ihre Zeit</p></span>
+                    <span class="fragment"><p>und Danke <br>an</p></span>
+                    <span class="fragment"><p>Trygve M. H. Reenskaug, Edsger_W._Dijkstra, Alan Kay, Dan Ingalls, Adele Goldberg, Dean Kerr, Wikipedia, Google Inc. und DuckDuckGo</p></span>
+                    
+                </section>
 
 
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+                <section>
+                   <h2>NICETOHAVE(for final presentation):</h2>
+                    <h1>Clever Quotes</h1>
+                    <p>
+                        These guys come in two forms, inline:
+                        <q
+                            cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations"
+                            >The nice thing about standards is that there are so
+                            many to choose from</q
+                        >
+                        and block:
+                    </p>
+                    <blockquote
+                        cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations"
+                    >
+                        &ldquo;For years there has been a theory that millions
+                        of monkeys typing at random on millions of typewriters
+                        would reproduce the entire works of Shakespeare. The
+                        Internet has proven this theory to be untrue.&rdquo;
+                    </blockquote>
+                </section>
 
-    <link rel="stylesheet" href="~/css/reset.css">
-    <link rel="stylesheet" href="~/css/reveal.css">
-    <link rel="stylesheet" href="~/css/theme/league.css">
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/monokai.css">
+                <section>
+                    <h2>Export to PDF</h2>
+                    <p>
+                        This Presentation can be
+                        exported to PDF, here's an example on 'slideshare.net':
+                    </p>
+                    <iframe
+                        data-src="https://www.slideshare.net/slideshow/embed_code/42840540"
+                        width="445"
+                        height="355"
+                        frameborder="0"
+                        marginwidth="0"
+                        marginheight="0"
+                        scrolling="no"
+                        style="border:3px solid #666; margin-bottom:5px; max-width: 100%;"
+                        allowfullscreen
+                    >
+                    </iframe>
+                </section>
 
-    <!-- Printing and PDF exports -->
-    <script type="text/javascript">
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? '/css/print/pdf.css' : '/css/print/paper.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
-</head>
-<body>
-    <div class="reveal">
-        <div class="slides">
-            <section>Slide 1</section>
-            <section>Slide 2</section>
+
+                <section data-state="customevent">
+                   <h2>TODO(for final presentation):</h2>
+                    <h1>State Events</h1>
+                    <p>
+                        Additionally custom events can be triggered on a per
+                        slide basis by binding to the
+                        <code>data-state</code> name. <br>
+                        see on the bottom of this file...
+                    </p>
+                    <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+                </section>
+
+
+                <section style="text-align: left;">
+                    <h1>THE END</h1>
+                    <p>
+                        -
+                        <a href="https://jurassiccode.cf">Try my nerdy Website</a>
+                        <br />
+                        -
+                        <a href="https://github.com/hakimel/reveal.js"
+                            >Hakimel's -Reveal.JS-Framework- is on GITHUB</a
+                        >
+                    </p>
+                </section>
+            </div>
         </div>
-    </div>
 
-    <script src="~/js/reveal.js"></script>
+        <script src="~/js/reveal.js"></script>
 
-    <script>
-        // More info about config & dependencies:
-        // - https://github.com/hakimel/reveal.js#configuration
-        // - https://github.com/hakimel/reveal.js#dependencies
-        Reveal.initialize({
-            hash: true,
-            dependencies: [
-                { src: '~/plugin/markdown/marked.js' },
-                { src: '~/plugin/markdown/markdown.js' },
-                { src: '~/plugin/highlight/highlight.js' },
-                { src: '~/plugin/notes/notes.js', async: true }
-            ]
-        });
-    </script>
-</body>
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                hash: true,
+
+                transition: "zoom", // none/fade/slide/convex/concave/zoom
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    {
+                        src: '~/plugin/markdown/marked.js',
+                        condition: function() {
+                            return !!document.querySelector("[data-markdown]");
+                        }
+                    },
+                    {
+                        src: '~/plugin/markdown/markdown.js',
+                        condition: function() {
+                            return !!document.querySelector("[data-markdown]");
+                        }
+                    },
+                    { src: '~/plugin/highlight/highlight.js' },
+                    { src: '~/plugin/search/search.js', async: true },
+                    { src: '~/plugin/zoom-js/zoom.js', async: true },
+                    { src: '~/plugin/notes/notes.js', async: true }
+                ]
+            });
+        </script>
+    </body>
 </html>
+<!--### Slide States
+
+If you set `data-state="somestate"` on a slide `<section>`, "somestate" will be applied as a class on the document element when that slide is opened. This allows you to apply broad style changes to the page based on the active slide.
+
+Furthermore you can also listen to these changes in state via JavaScript:
+
+```javascript
+Reveal.addEventListener( 'somestate', function() {
+	// TODO: Sprinkle magic
+}, false );-->
