@@ -122,7 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
-    <Compile Include="Controllers\pluginController.cs" />
+    <Compile Include="Controllers\NotesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -217,8 +217,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Views\plugin\notes.html" />
-    <Content Include="Views\plugin\notes.js" />
+    <Content Include="Views\Notes\notes.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -240,7 +239,7 @@
     <Content Include="Views\Movies\ListOnly.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Home\Presentation.cshtml" />
-    <Content Include="Views\plugin\notes.cshtml" />
+    <Content Include="Views\Notes\Notes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

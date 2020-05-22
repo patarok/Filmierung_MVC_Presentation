@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace Filmierung.Controllers
 {
-    public class pluginController : Controller
+    public class NotesController : Controller
     {
-        // GET: plugin
-        public ActionResult notes()
+        // GET: Notes
+        public ActionResult Notes()
         {
             return View();
         }

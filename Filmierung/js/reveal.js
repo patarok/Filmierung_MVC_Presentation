@@ -3337,9 +3337,7 @@
 	function updateNotes() {
 
 		if( config.showNotes && dom.speakerNotes && currentSlide && !isPrintingPDF() ) {
-
 			dom.speakerNotes.innerHTML = getSlideNotes() || '<span class="notes-placeholder">No notes on this slide.</span>';
-
 		}
 
 	}

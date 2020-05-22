@@ -20,6 +20,7 @@ var RevealNotes = (function() {
             return;
         }
 
+		//SPEAKERVIEWPROBLEM: das musse anschauen
 		if( !notesFilePath ) {
 			var jsFileLocation = document.querySelector('script[src$="notes.js"]').src;  // this js file path
 			jsFileLocation = jsFileLocation.replace(/notes\.js(\?.*)?$/, '');   // the js folder path
