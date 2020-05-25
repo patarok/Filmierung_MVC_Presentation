@@ -142,8 +142,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap_sketchy.css" />
     <Content Include="Content\bootstrap_spacelab.min.css" />
+    <Content Include="Content\Images\aspNETfolderStr.png" />
+    <Content Include="Content\Images\looseFilmstripeJPGbg.jpg" />
     <Content Include="Content\Images\mvcPres_arrow.png" />
+    <Content Include="Content\Images\MVC_DiagramSelf.png" />
     <Content Include="Content\Images\neo_glued.jpg" />
+    <Content Include="Content\Images\popUP.png" />
     <Content Include="css\overlay.css" />
     <Content Include="css\print\paper.css" />
     <Content Include="css\print\pdf.css" />
@@ -166,6 +170,13 @@
     <Content Include="Content\Site.css" />
     <Content Include="js\reveal.js" />
     <Content Include="plugin\highlight\highlight.js" />
+    <Content Include="plugin\lightbox\css\lightbox.css" />
+    <Content Include="plugin\lightbox\images\close.png" />
+    <Content Include="plugin\lightbox\images\loading.gif" />
+    <Content Include="plugin\lightbox\images\next.png" />
+    <Content Include="plugin\lightbox\images\prev.png" />
+    <Content Include="plugin\lightbox\js\lightbox-plus-jquery.js" />
+    <Content Include="plugin\lightbox\js\lightbox.js" />
     <Content Include="plugin\markdown\example.html" />
     <Content Include="plugin\markdown\markdown.js" />
     <Content Include="plugin\markdown\marked.js" />
@@ -240,6 +251,7 @@
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Home\Presentation.cshtml" />
     <Content Include="Views\Notes\Notes.cshtml" />
+    <Content Include="Views\Home\faq.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

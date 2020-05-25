@@ -32,9 +32,13 @@
 		.navbar-collapse.in {
 	display: block !important; /*maybe important for reveal but is it important for pages not displaying presentations?*/
 } /*FIXING PROBLEM IN CAUSE OF BOOTSTRAP-VERSION MISMATCH... THEME IS 4.4 VS2017/2019 ASP.NET SEEMS TO DEFAULT TO 3.3*/
+	body{
+		background-image: url("../../Content/Images/looseFilmstripeJPGbg.jpg");
+		background-size: 100% auto;
+	}
 	</style>
 </head>
-<body>
+<body style="overflow:auto; height:auto" >
 	<div class="navbar navbar-inverse navbar-fixed-top ledge">
 		<div class="container">
 			<div class="navbar-header">
@@ -85,7 +89,9 @@
 				{ src: 'plugin/notes/notes.js', async: true },
 				{ src: 'plugin/highlight/highlight.js', async: true }
 			]
-		});
+        });
+
+
 	</script>
 </body>
 </html>

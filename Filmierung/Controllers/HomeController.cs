@@ -44,7 +44,12 @@ namespace Filmierung.Controllers
 
         public ActionResult Specific()
         {
-            return View("~/Views/Specific.html");
+            return View("~/Views/Specific.html"); // would this however work?
+        }
+
+        public ActionResult faq()
+        {
+            return View();
         }
 
         //public ActionResult notes()
