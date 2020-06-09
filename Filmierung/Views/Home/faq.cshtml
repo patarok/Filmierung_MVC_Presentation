@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width" />
     <title>faq</title>
     <link href="~/plugin/lightbox/css/lightbox.css" rel="stylesheet" />
-
+    <style>
+        .lb-outerContainer{
+            width: 210px;
+        }
+        .lb-dataContainer{
+            width: 210px;
+        }
+        .lb-image{width:206px;}
+    </style>
 </head>
 <body>
     <div>
         <h1><br /><br />  Hey! I am a rather shy application, but:</h1>
         <p>I'll show you a screenshot of my... folder Structure!:</p>
-        <a class="example-image-link" href="~/Content/Images/popUP.png" data-lightbox="example-set" data-title="The Folder Structure">
-            <img class="example-image" src="~/Content/Images/aspNETfolderStr.png" alt="The Folder Structure" style="max-width: 65vw;">
+        <a href="~/Content/Images/popUP.png" data-lightbox="example-folder" data-title="The Folder Structure" style="min-height:92vh;" positionFromTop="15">
+            <img src="~/Content/Images/aspNETfolderStr.png" alt="The Folder Structure" style="min-width: 86vw; max-width: 86vw;">
         </a>
     </div>
     <script src="~/plugin/lightbox/js/lightbox-plus-jquery.js"></script>

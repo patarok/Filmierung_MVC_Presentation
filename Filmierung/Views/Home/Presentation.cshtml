@@ -29,7 +29,7 @@
             name="description"
             content="A pattern for User-Applications"
         />
-        <meta name="author" content="Hakim El Hattab" />
+        <meta name="author" content="Peter Patoschka" />
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -74,25 +74,11 @@
                         <small>Ein Vortrag von                             <a href="http://pentaray.ga">Peter Patoschka</a> fuer die Fachkraftspruefung zur Ausbildung 'Application/Coding' am BBRZ</small>
                     </p>
                     <aside class="notes">
-                        Willkommen bei meiner Praesentation zum MVC-Architektur bzw. Entwurfsmuster!
+                        
                     </aside>
                 </section>
 
 
-                <!--second-->
-                <section>
-                    <h2>WAHR/FALSCH</h2>
-                    <h3>
-                        Marvel VS. Capcom -
-                        <span class="fragment highlight-red">falsch</span><br />
-                        ASP.NET MVC isn't true "MVC" -
-                        <span class="fragment highlight-red">?</span>
-                    </h3>
-                    <aside class="notes">
-                        Welche der beiden Aussagen stimmt nun?
-                        -nein -naja
-                    </aside>
-                </section>
 
                 <!--third-->
                 <section>
@@ -103,7 +89,8 @@
                         </span>
                     </h3>
                     <aside class="notes">
-                        Was ich ihnen dazu aber anfangs schon sagen kann ist das folgende Aussage richtig ist.
+                        Ich halte fest: MVC ist keine Microsoft-Erfindung und steht nicht stellvertretend fuer ASP.NET MVC.
+                        MVC IST EIN GRUNDLEGENDES KONZEPT
                     </aside>
                 </section>
 
@@ -114,10 +101,9 @@
                         +Organisation<br> +Interaktion
                     </h3>
                     <aside class="notes">
-                        Und dass, MVC ein Architekturmuster darstellt.
-                        Dieses Architekturmuster bestimmt, je nach Anwendung,
-                        grundlegende Organisation und Interaktion zwischen Programmteilen.
-                        Es findet in vielen Bereichen Anwendung und dient auch als Vorlage fuer andere Muster.
+                        Bzw. Architekturmuster.
+                        Es bestimmt grundlegende Organisation und Interaktion zwischen Programmteilen,
+                        findet in vielen Bereichen Anwendung und dient auch als Vorlage fuer andere Muster.
                     </aside>
                 </section>
 
@@ -132,12 +118,9 @@
                         -> auf "C64, Atari 800XL, Amiga" bspw. in BASIC
                     </p>
                     <aside class="notes">
-                        Manche behaupten es haette seinen Ursprung in Endnutzeranwendungen.
-                        Andere wiederum wollen wissen, dass es wie vieles andere in der IT seinen Ursprung in Smalltalk oder Simula gehabt haben muss.
-
-                        Es steht xxxCLICKxxx im krassen Gegensatz zur monolithischen Programmierung <br />xxxCLICKxxx <br />
-                        wie sie ganz am Anfang der Heimcomputer-Aera noch ueblich war, <br />
-                        sie erinnern sich vielleicht an diverse BASIC-Programme <br />und wie diese in einem Stueck heruntergeschrieben wurden…
+                        Es entstammt sicher den Anfaengen der objektorientierten Programmierung
+                        und steht im Gegensatz zum monolithischen Design der
+                        damals ueblichen BASIC-Programmierung auf Heimcomputern wie C64 etc.
                     </aside>
                 </section>
 
@@ -150,60 +133,11 @@
                         &emsp;&emsp;&emsp;&emsp;&emsp;-> AutoSync
                     </p>
                     <aside class="notes">
-                        Durch die Grundsaetze von MVC: <br />
-                        Model = Daten <br />
-                        View = Ansicht <br />
-                        Controller = Logik<br />
-
-                        … und den fuer die MVC-Architektur, <br />
-                        auf logischer Ebene definierten Kommunikationswegen,
-                        ergibt sich nicht nur  Wiederverwendbarkeit und Skalierbarkeit von Programmteilen,
-                        ...(durch die irgendwie zugehoeriegen Konzepte SRP und SoC)…
-                        sondern auch ein AutoSync von veraenderten Daten..
+                        Durch das Muster: Model-View-Controller ergeben sich Wiederverwendbarkeit und Skalierbarkeit <br />
+                        ...und folgt man der exakten Definition natuerlich auch AutoSync.
                     </aside>
                 </section>
                 <!--nested vertical slides -->
-                <section>
-                    <h2>HINTERGRUNDWISSEN</h2>
-                    <h3>SoC</h3>
-                    <!--eventuell in einen Vertikalen-->
-                    <h4>Separation of Concerns <br></h4>
-                    <p>
-                        - Separierte Belange <br />
-                        *bzw. Veranwortung od. Zustaendigkeit
-                    </p>
-                    <aside class="notes">
-                        Lassen sich mich dazu erstmal SoC erklaeren, <br /> was<br /> 
-                        Separation of Concerns <br />
-                        bedeutet und ein Grundprinzip im SoftwareDesign ist,<br />
-                        es steht dafuer, <br /> dass ein Programm in bestimmte Teile/Module aufgeteilt werden soll,<br /> wovon jedes eine bestimmte Verantwortung traegt.
-                        Rein Prinzipiell wuerde man Concern <br /> eher mit "Belang" oder "Betreff" uebersetzen.<br />
-                        Was wenn man sich die Anwendung von SoC ansieht, auch zutreffender ist:<br />
-                        Bspw. kann ein Belang etwas allgemeines sein wie "Information der Hardware mit der die Applikation laeuft", oder sehr speziell sein wie<br /> "der Name der zu instanzierenden Klasse".
-                        MVC folgt diesem Grundprinzip.
-                    </aside>
-                </section>
-
-                <section>
-                    <h2>HINTERGRUNDWISSEN</h2>
-                    <h3>SRP</h3>
-                    <!--eventuell in einen Vertikalen-->
-                    <h4>Single Responsibility Principle</h4>
-                    <p>
-                        - Alleinige Verantwortung <br>
-                        &emsp;&emsp;&emsp;&emsp;ueber einen Funktionalitaetsteil, <br>
-                        definiert durch einen Akteur <br>
-                        &ensp;*in einem Modul &emsp;
-                    </p>
-                    <aside class="notes">
-                        SRP bedeutet
-                        Single Responsibility Principle
-                        und bei SRP geht es darum, 
-                        die Anforderungen die von einem Akteur defiiert wurden,
-                        in Sammlungen an Funktionalitäten und Datenstrukturen,
-                        gesamt in einer Zustaendigkeitsinstanz zusammenzufassen.
-                    </aside>
-                </section>
 
 
 
@@ -215,7 +149,7 @@
                         <span class="fragment">Produktanforderung: </span>
                         <br />
                         <span class="fragment">'user-oriented organisation of requirements'</span> <br>
-                        <span class="fragment"> 
+                        <span class="fragment">
                             erste
                             Einteilung: 'Actions, Models, DynaBook-System'
                         </span> <br><span class="fragment">
@@ -230,9 +164,9 @@
                         </span>
                     </p>
                     <aside class="notes">
-                        Die Ausformulierung von MVC kam laut meinen Recherche-Quellen (Uni-Oslo, StackOverflow, Google) bei der Entwicklung bzw. Arbeit an der Vision des DynaBooks von 'Xerox PARC' zustande.
+                        Die Ausformulierung von MVC kam laut meinen Recherche-Quellen* bei der Entwicklung bzw. Arbeit an der Vision des DynaBooks von 'Xerox PARC' zustande.
                         <br />Wobei eben an einem portablen Computer gearbeitet wurde, bei welchem dem Nutzer nach dem Motto<br />
-                        "user-oriented organisation of requirements", alle Moeglichkeiten zur eigenstaendigen Gestaltung seiner Arbeitsumgebung angeboten werden sollten, dazu musste eine
+                        "user-oriented organisation of requirements", <br />alle Moeglichkeiten zur eigenstaendigen Gestaltung seiner Arbeitsumgebung angeboten werden sollten, <br /> dazu musste eine
                         Struktur gefunden werden.<br />
                         Angefangen hat man schliesslich mit "Actions und Models" <br /><br /> und was wir heute als <br />Controller verstehen,<br />
                         <br />wurde damals mit DynaBook-System bezeichnet.
@@ -240,7 +174,7 @@
 
                         Eine erste AUSDRUECKLICH dem MVC Modell gewidmete Arbeit erschien aber erst 87 od. 88
                         und hiess <br /> „A Cookbook for Using the M-V-C User Interface Paradigm in SmallTalk-80“ <br />
-                        ..--> hier der link 
+
                     </aside>
                 </section>
 
@@ -253,15 +187,15 @@
                         </p>
                     </div>
                     <aside class="notes">
-                        zur Page eines Dozenten der Uni Oslo, der damals zu Xerox PARC eingeladen wurde und an dem Projekt mitarbeitete<br /><br /><br />
+                        In diesem Original-Dokument eines Entwicklers von Xerox PARC sehen wir:<br /><br /><br />
                         Dem naiven User soll es so leicht wie moeglich gemacht werden, sein System selbst mitzugestalten.<br />
-                        BLACKSCREENPAUSEXXX <br />  Die Vorteile sind wie schon erwaehnt leicht ersichtlich: XXXBLACKSCREENPAUSE
+                        <br />  Die Vorteile sind wie schon erwaehnt leicht ersichtlich:
                     </aside>
                 </section>
 
                 <section>
                     <section>
-                        <h2><u>Zwischenschluss vor der CIS-Dur</u></h2>
+                        <h2><u>Zwischenschluss</u></h2>
                         <p class="fragment">
                             MVC BIETET MODULARITAET DURCH AUFTEILUNG IN
                             VERANTWORTUNGSBEREICHE.
@@ -274,50 +208,397 @@
                         <h3 class="fragment">MVC => RAD</h3>
                         <p>▽▽▽</p>
                         <aside class="notes">
-                            Wir kommen zum Zwischenschluss vor der CIS-Dur<br />
-                            Durch die Aufteilung in die definierten Verantwortungsbereiche,<br />ergeben sich mehrere Vorteile wie Modularitaet<br />
-                            und Wiederverwendbarkeit, etc.
+                            Durch die Aufteilung in die definierten Verantwortungsbereiche,<br />
+                            ergiebt sich eine bessere Uebersicht auf die Programmteile und ihre Zustaendigkeiten.<br />
+                            Somit ergibt sich weiters eine bessere Wiederverwendbarkeit, der einzelnen Programmteile.
                             <br />
+                            Wir fassen zusammen: <br />
                             =>MVC ist keine fanatische Religion sondern ein Architekturmuster dem man in einem Projekt folgen,<br />
                             es aber auch veraendern und andere Konzepte hinzufuegen kann.
 
-                            Es mag zwar,<br /> wenn man sich die exakte Definition ( so wie sie urspruenglich verfasst wurde ) anhoert,
-                            <br />irgendwie komplex klingen…<br /><br />
-                            Es vereinfacht aber in Wirklichkeit die Anwendungsentwicklung,<br />
-                            da sich so auch gut Boilerplates nach dem Muster vorbereiten lassen,<br />
-                            mit denen man gut RAD-Projekte umsetzen kann.
+                            Es mag,<br />laut Definition,
+                            <br />etwas komplex klingen…<br /><br />
+                            vereinfacht aber in Wirklichkeit die Anwendungsentwicklung,<br />
+                            da sich damit wiederverwendbare Boilerplates nach dem Muster vorbereiten lassen,<br />
+                            mit denen man gut R(apid)A(pplication)D(evelopment)-Projekte umsetzen kann.
+                            Schauen wir uns ein Video zur definierten Kommunikation des MVC-Musters an:
                         </aside>
                     </section>
+
+
+                </section>
+
+
+                @*changed: &ytp-pause-overlay=0*@
+                <section data-background-iframe="https://www.youtube.com/embed/qLTbfUte1Tc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                         data-background-interactive>
+
+                    <aside class="notes">
+                        <br /> XXX CLICK pLAY iN MAIn-winDOw!! xxxXXX
+                        <br />
+                        .. Sie sehen, <br />
+                        der User interagiert mit der View <br />
+                        die View teilt dem Controller mit: <br />
+                        veraendere Dies und Das <br />
+                        Der Controller teilt dem Model mit nach welcher Logik er seine Daten veraendern soll. <br />
+                        Das Model wendet entsprechende Business-Logic auf seine Daten an. <br />
+                        hier =auf logischer Ebene= wo das Modell dem View mitteilt, <br />dass es sich veraendert hat <br />
+                        <br />passiert das, <br />in ASP.net MVC <br /> mittels Rueckgabe an die gerufene Controllermethode,
+                        welche dann die View entsprechend veraendert und zurueckgibt.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>.WIEDERHOLUNG.</h2>
+                    <p>
+                        <span class="fragment">ist Strukturvorgabe<br>um</span> <br>
+                        <span class="fragment">Programmbereiche<br>in</span>
+                        <br>
+                        <span class="fragment highlight-red">M</span>
+                        <span class="fragment highlight-green">V</span>
+                        <span class="fragment highlight-blue">C</span><br>
+                        <span class="fragment">SO GUT WIE MOEGLICH <br>und</span><br>
+                        <span class="fragment">
+                            EINDEUTIG<br>
+                            voneinander zu trennen.
+                        </span>
+                    </p>
+                    <aside class="notes">
+                        Lassen sie uns erneut ein Resumee ziehen:<br />
+                        Man sieht dass MVC eine Strukturvorgabe ist, <br />die es sich zur Aufgabe gemacht hat,<br />
+                        einzelne Programmteile mit defierten Aufgabenbereichen, so gut wie moeglich,<br /> EINDEUTIG, <br />voneinander separat zu halten.<br /><br />
+                        was wie Anfangs schon bemerkt mehrere Vorteile mit sich bringt.<br />
+                    </aside>
+                </section>
+
+                <!--SELFCALL to -> Filmierung.APP-->
+                <section data-background-iframe="http://localhost:58144/Home"
+                         data-background-interactive>
+                    <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                        <h2>ASP.net MVC </h2>
+                        <p>
+                            Take a byte!
+                        </p>
+                    </div>
+                    <aside class="notes">
+                        Sie haben ja gesehen, <br />
+                        die Praesentation wurde aus einer MVC-App<br />
+                        heraus gestartet. <br />
+                        Lassen sie uns darin gleich den Code der Applikation selbst ansehen.<br />
+                        <br />
+                        xxx FAQ - Seite innerhalb Applikation oeffnen <br />-->Info--  xxxXXX
+                        <br />
+                        <br />
+                        Es handelt sich hier nur um eine kleine App, aber man sieht hier mal wie so ein Modell aussieht:
+                        Hier sind alle Teile des Modells definiert, <br />die wir in unserer App darstellen wollen. <br />
+                        Und man findet die zugehoerige Business-Logic darin. <br />
+                        Sieht man sich die Folder-Struktur an, <br />
+                        Kann man gut den Aufbau bzw. das Geruest MODEL VIEW CONTROLLER sehen.
+                        Jede View hat <br />einen Controller welcher wiederum seinerseits, <br />mit einem Model kommunizieren kann. <br />
+                         ENDE
+                    </aside>
+                </section>
+
+
+                <section>
+                    <h2>ASP.NET MVC</h2>
+                    <section>
+                        <p>&emsp;</p>
+                        <img src="../../Content/Images/MVC_DiagramSelf.png" alt="Diagramm zu ASP.NET" style="border:none;" />
+
+                        <aside class="notes">
+                            Sehen wir uns das nochmal in einem Diagramm an:
+                            Der User stellt eine Anfrage ueber die View, <br />
+                            die View macht eine Anfrage an den Controller, <br />
+                            welcher dann die angeforderten Updates <br />an das Model weiterleitet, <br />
+                            welches seinerseits wiederum dem Controller mitteilt, dass es das Update <br />fertig ausgefuehrt hat,<br />
+                            bzw. zum Controller "RETURNED" also retourniert.<br />
+                            Der Controller gibt dann schliesslich die durchgefuehrten Updates<br />an die View weiter.<br />
+                            Welche sie, <br />fuer den Benutzer aufbereitet anzeigt.
+                        </aside>
+                    </section>
+                </section>
+
+
+                <!--pause bildschirm--> <!--Erklaerung zur Dehnbarkeit des Begriffs-->
+                @*Reveal.addEventListener( 'customevent', function() {
+        Reveal.configure({ controls: true });
+        } );*@
+
+                <section style="color:orange;" data-background="https://thumbs.gfycat.com/WanPointedEarwig-max-1mb.gif">
+                    <h2 style="color:orange;">WEITERE MUSTER:</h2>
+                   
+                    <section>
+                        <!--PAC-->
+                        <h2 style="color:red;">PAC</h2>
+                        <h3 style="color:orangered;" class="fragment">Presentation-Abstraction-Control</h3>
+                        <p>
+                            <span style="color:orangered;">
+                                <span class="fragment highlight-blue">Anforderungen </span><span class="fragment">-></span>
+                                <span class="fragment highlight-blue">Agenten</span><br><span class="fragment">- Jeder Agent:</span><br>
+                            </span><span class="fragment highlight-green">P</span><span class="fragment">resenter, </span><span class="fragment highlight-red">A</span><span class="fragment">bstraction, </span><span class="fragment highlight-green">C</span><span class="fragment">ontrol</span>
+                        </p>
+                        <aside class="notes">
+                            Beschreibt man das MVC Modell kommt man nicht umhin, <br />
+                            noch andere Muster, <br />
+                            bzw. Ableger des MVC-Architekturmusters zu erwaehnen.
+                            Ich beschraenke mich auf 2 davon.
+                            Eines heisst:
+                            ist PresentationAbstractionControl<br />
+                            kurz:<br /> PAC<br />
+                            Bei Presentation-Abstraction-Control,  xxxCLICKxxx<br /> werden Anforderungen <br />  xxxCLICKxxx auf Agenten verterteilt.<br />
+                            xxxCLICKxxx<br />
+                            Welche sich dann wieder in <br /> xxxCLICKxxx Presenter, <br />
+                            xxxCLICKxxx Abstraction <br />
+                            und   xxxCLICKxxx  Control <br />unterteilen.
+                        </aside>
+                    </section>
+
+                    <section>
+                        <!--MVVM-->
+                        <h2 style="color:orangered;">MVVM</h2>
+                        <h3 style="color:red;"><span class="fragment">Model-View-ViewModel</span></h3>
+                        <p class="fragment" style="color:orange;">und nicht</p>
+                        <h3><span class="fragment"><span class="fragment highlight-blue">Model-View-View-Model</span></span></h3>
+                        <p>
+                            <span class="fragment">Vorteil:</span>
+                            <span class="fragment">Rollentrennung -> </span><br>
+                            <span class="fragment">UX/UI-Designer</span>
+                            <span class="fragment">|</span>
+                            <span class="fragment">UI/Logic-Programmer</span>
+                        </p>
+                        <aside class="notes">
+                            und zum Schluss: <br /> Model . View . ViewModel <br />
+                            MVVM ist dahingehend interessant, dass es eine Rollentrennung in UI-Designer und Entwickler erlaubt, <br />
+                            wodurch die Anwendungsschichten LOGIC und UI/UX von verschiedenen Arbeitsgruppen entwickelt werden können.<br />
+                            xxx 5 CLICKSxxx <br />
+                            Der Vorteil dabei ist: <br />
+                            Designer können ihren Fokus auf User Experience legen und Entwickler die UI- bzw. GeschäftsLOGIK schreiben.
+                        </aside>
+                    </section>
+
+                </section>
+
+                <!--section other frameworks than ASP.NET MVC-->
+                <section>
+                    <section data-background="https://media.giphy.com/media/a29uUCryHZkPe/giphy.gif">
+                        <h2 style="color:indianred;">andere MVC FRAMEWORKS:</h2>
+                        <aside class="notes">
+                            Abschliessend mag ich ihnen noch ein paar <br />
+                            nicht Microsoft-MVC-Frameworks <br />
+                            vorstellen.
+                        </aside>
+                    </section>
+
+                    <section data-background-iframe="https://www.larashout.com/what-is-laravel-and-why-you-should-learn-it"
+                             data-background-interactive>
+                        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                            <h2>Laravel</h2>
+                            <p>
+                                -modulares Packaging System <br />
+                                -Dependency Manager <br />
+                                -Utilities <br />
+                                -Syntactic Sugar
+                            </p>
+                            <aside class="notes">
+                                Bietet:
+                                Ein modulares Packaging-System mit einem dezidiertem Dependency-Manager,
+                                sowie unterschiedliche Moeglichkeiten, relationale Datenbanken und Utilities fuer Deployment und Wartung anzusprechen.
+                                Weiters legt das Framework auch Wert auf "Syntactic Sugar".
+                                Was Bedeutet, dass eine besondere Syntax angeboten wird die vieles vereinfachen soll.
+                            </aside>
+                        </div>
+                    </section>
+                    <section data-background-iframe="https://rubyonrails.org/"
+                             data-background-interactive>
+                        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                            <h2>Ruby-On-Rails</h2>
+                            <p>
+                                -Programmiersprache: Ruby <br />
+                                -DRY-Prinzip
+                                -Convention before Configuration
+                            </p>
+                            <aside class="notes">
+                                Ruby on Rails, kurz Rails, früher auch oft kurz RoR, ist ein ursprünglich von David Heinemeier Hansson,
+                                in der Programmiersprache Ruby geschriebenes und quelloffenes Webframework.<br />
+                                Rails ist geprägt von den Prinzipien „don’t repeat yourself“ (DRY) und <br /> „Konvention vor Konfiguration“:
+                                Das heißt, statt einer variablen Konfiguration sind Konventionen für die Namensgebung von Objekten einzuhalten,
+                                aus denen sich deren Zusammenspiel automatisch ergibt.
+                                Diese Funktionen ermöglichen eine rasche Umsetzung von Anforderungen.
+                            </aside>
+                        </div>
+                    </section>
+                    <section data-background-iframe="https://sailsjs.com"
+                             data-background-interactive>
+                        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                            <h2>Sails.JS</h2>
+                            <p>
+                                -entwickelt mit Node.js
+                                -MIT-Lizenz
+                                -Ergaenzung zu node.js
+                            </p>
+                            <aside class="notes">
+                                Sails.js ist ein MVC-WebApp Framework welches mit dem Node.JS Environment entwickelt wurde,
+                                und ist unter der MIT-Lizenz als freie Software verfuegbar.<br />
+                                Es wurde mit dem Ziel geschrieben, die Entwicklung von kommerziellen Node.JS WebApps und APIs zu vereinfachen.
+                            </aside>
+                        </div>
+                    </section>
+
+                    <section data-background="https://cdn.iwastesomuchtime.com/822012231911whenmygirlfriendsaysweneedtotalk.gif"><h2 style="color:red;">... bevor wir den Rahmen sprengen,<br>rekapitulieren wir ein letztes Mal...</h2></section>
+                    <h2 style="color:dimgray">ABSCHLIESSEND NOCH:</h2>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>
+                            BESTAND<span class="fragment">T</span><span class="fragment">E</span><span class="fragment">I</span><span class="fragment">L</span><span class="fragment">E</span>
+                        </h2>
+                        <p>Aufteilung in:</p>
+                        <br />
+                        <a href="#" class="navigate-down">
+                            <img style="border:none; background-color:none;"
+                                 width="178"
+                                 height="238"
+                                 data-src="../../Content/Images/mvcPres_arrow.png"
+                                 alt="Down arrow" />
+                        </a>
+                        <aside class="notes">
+                            Die Bestand- xxx!5CLICKsxxx -teile <br /><br /><br />
+                            von MVC sind genau so definiert,<br />
+                            wie zuvor erwaehnt,<br />
+                            aber fassen wir nochmal kurz zusammen:
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>MODEL:</h2>
+                        <p>
+                            <span class="fragment"><u>ist:</u> </span><br>
+                            <span class="fragment">-WISSEN </span>
+                            <br /> <span class="fragment">-STRUKTURIERTE DATEN </span>
+                            <br /><span class="fragment">&ensp;*Objekt</span>
+                            <br /><span class="fragment">&ensp;*Struktur aus mehreren Objekten</span>
+
+
+                        </p>
+                        <p>
+                            <span class="fragment"><u>bietet: </u></span><br /><span class="fragment">Business Logic(Modell-Logik/Methoden)</span> <br /><span class="fragment">Information/Kommunikation: </span><span class="fragment">MODEL->VIEW</span>
+                            <br />
+                        </p>
+                        <aside class="notes">xxxx laut FOLIE xxxx <br />
+                        - ..ist <br />
+                        * ..stellt sich dar als<br />
+                        ! bietet weiters: <br />
+                         ...bzw Methoden das Geschaeftsobjekt betreffend.<br />
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>VIEW</h2>
+                        <p>
+                            <span class="fragment"><u>macht:</u> </span><br>
+                            <span class="fragment">-RAEPRESENTATION </span><br><span class="fragment">-STRUKTURIERTE ANSICHT der DATEN</span>
+                            <br /><small>
+                                <span class="fragment">&ensp;*...hebt hervor</span>
+                                <br /><span class="fragment">&ensp;*...blendet aus</span>
+                                <br /><span class="fragment">&emsp;&emsp;&emsp;&emsp;*...sendet Nachrichten</span>
+                            </small>
+                        </p>
+                        <p>
+                            <span class="fragment"><u>ist:</u> </span><br /><span class="fragment">
+                                AnsichtsFilter<br />
+                                UserInterface
+                            </span>
+
+                        </p>
+                        <aside class="notes">xxxx laut FOLIE xxxx</aside>
+                    </section>
+                    <section>
+                        <h2>CONTROLLER</h2>
+                        <p>
+                            <span class="fragment"><u>bedeutet:</u> </span><br />
+                            <span class="fragment">-VERBINDUNG </span><br />
+                            <span class="fragment">-INFORMATIONSAUFBEREITUNG</span>
+                            <br>
+                            <span class="fragment">
+                                &ensp;*Schnittstelle<br />
+                                &ensp;*Uebersetzer/Umwandler <br>
+                            </span>
+                            <span class="fragment"><small>(im Datenstrom/Datenaustausch)</small></span>
+                        </p>
+                        <p>
+                            <span class="fragment">&ensp;<u>bietet also:</u></span> <br />
+                            <span class="fragment">CRUD-Logic</span><br /><span class="fragment">Input-Handling</span><br /><span class="fragment">Application-Logic</span>
+                            <br />
+                        </p>
+                        <aside class="notes">xxxx laut FOLIE xxxx <br />
+                        - .. bedeutet <br />
+                        * .. ist bzw. kann verstanden werden als:<br />
+                         ...lso... Inp... Sowie die eigentliche Applic...<br />
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <h2 class="fragment">AMBIVALENZ<br>in <span style="color:red;">MVC</span></h2>
+                    <p><span class="fragment">- Gesamtkonzept</span>
+                    <p><span class="fragment">- Teilsystem</span>
+                    <p><span class="fragment">- Grundidee</span>
+                    <p>
+                        <span class="fragment">- ebenfalls eher Strukturvorgaben</span>
+                        <br><span class="fragment">- schwierig von MVP zu unterscheiden</span>
+                        <br><span class="fragment">-> RAD</span>
+                    </p>
+                    <aside class="notes">
+                        Natuerlich ergiebt sich bei MVC-Frameworks und auf MVC basierenden Anwendungen,
+                        immer eine gewisse Ambivalenz. <br />
+                        Soll heissen, es wird das Muster nicht immer zu 100% exakt verfolgt. <br />
+                        Und auch viele weitere Muster wie MVC sind ebenfalls eher Strukturvorgaben,
+                        als Regeln die zu 100% auf "Biegen und Brechen" einzuhalten sind.
+                        Nichtsdestotrotz folgen solche Muster im groben immer so gut wie moeglich ihrer Definition.
+                        Sie koennen aber dennoch eine gute Stuetze fuer RAB/RAD Projekte sein, <br />
+                        xxx SCROLLtoBOTTOM XXX <br />
+                        wenn man sich so exakt wie moeglich,<br />
+                        an die Definitionen haelt, <br />die als passend fuer das verwendete Muster festgelegt wurden.
+
+                        Abschliessend nochmal die Meinung eines Wikipedia-Autors zur Ambivalenz des Begriffs 'MVC':
+                        Die Begriffe des ursprünglichen MVC-Musters werden heute oft entlehnt, um Systeme begreiflich zu machen, die weitaus komplexer sind als die damalige Software. Dabei kommt es auf die Perspektive des betrachteten Teilsystems an, welche Elemente damit bezeichnet werden.
+                        Somit laesst sich schliessen:
+                        Die Grundidee der Trennung von Model, View und Controller hat sich erhalten, wird aber feiner granuliert und verschachtelt eingesetzt.
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>URSPRUENGLICHE DEFINITION ?</h3>
 
                     @*MVC-DEFINITION*@
 
 
-                    <section>
-                        <h1>MODEL</h1>
-                        <blockquote style="font-size: 0.7em;">
-                            &ldquo;Modelle repraesentieren, bzw. das Modell repraesentiert Wissen bzw. aufbereitete oder strukturierte Daten. Ein Modell kann ein einziges Objekt sein(eher uninteressant), oder es ist eine Struktur aus mehreren Objekten.
-                            Es sollte einerseits eine "Eins zu Eins"-Korrespondenz zwischen dem Modell und seinen Teilen auf der einen Seite
-                            und der vom Eigentuemer als Entitaet wahrgenommenen Repraesentation, also dem View auf der anderen Seite geben.
-                            Es sollte auch die Business-Logic enthalten.&rdquo;
-                        </blockquote>
-                        <small><br>...auch wenn einige Menschen dazu tendieren diesen <a href="#/22">FAKT</a> zu leugnen und selbige mittels Dependency-Injection(externe Libraries) oder einer Service-Layer zu implementieren...</small>
-                        <aside class="notes">
-                            Modelle repraesentieren, <br />bzw. das Modell repraesentiert<br /> Wissen bzw. aufbereitete oder strukturierte Daten.<br /> Ein Modell kann ein einziges Objekt sein<br />(eher uninteressant),
-                            <br /> oder es ist eine Struktur aus mehreren Objekten.
-                            <br />Es sollte einerseits eine "Eins zu Eins"-Korrespondenz zwischen dem Modell und seinen Teilen auf der einen Seite<br /><br />
-                            und der vom Eigentuemer als Entitaet wahrgenommenen Repraesentation auf der anderen Seite geben.<br /><br />
-                            Es sollte also auch die Business-Logic enthalten, <br /> auch wenn einige Menschen dazu tendieren diesen Fakt zu leugnen <br />und selbige mittels Dependency-Injection**<br /> zu implementieren.
-                            lassen sie uns kurz ansehen was Erfinder der Objektorientierten Programmierung zu Modellen ohne Logik sagen: XLINKX.
-                            Ich fasse zusammen, wir haben im Modell zugriff auf:<br />
-                            -die Daten bzw. das Datenmodell<br />
-                            -Business Logic<br />
-                            =>Logik zur Modell-Zustandsveraenderung <br />
-                            und zur Mitteilung des Zustands der Daten<br />
-                            &emsp;&emsp;(bzw. ihrer Veraenderung) an alle  eingeschriebenen Teilnehmer <br />bzw. den Controller<br /><br />
-                            **(externe Libraries)
-                            >>>>!!!!!!!!!!!LINK!!!!!!!!!!!!!!!
-                        </aside>
-                    </section>
+                <section>
+                    <h1>MODEL</h1>
+                    <blockquote style="font-size: 0.7em;">
+                        &ldquo;Modelle repraesentieren, bzw. das Modell repraesentiert Wissen bzw. aufbereitete oder strukturierte Daten. Ein Modell kann ein einziges Objekt sein(eher uninteressant), oder es ist eine Struktur aus mehreren Objekten.
+                        Es sollte einerseits eine "Eins zu Eins"-Korrespondenz zwischen dem Modell und seinen Teilen auf der einen Seite
+                        und der vom Eigentuemer als Entitaet wahrgenommenen Repraesentation, also dem View auf der anderen Seite geben.
+                        Es sollte auch die Business-Logic enthalten.&rdquo;
+                    </blockquote>
+                    <small><br>...Definition laut Xerox PARC(Palo Alto Research Center) sagt eindeutig, dass die <a href="#/19">Business-Logic</a></small> im Model sein soll
+                    <aside class="notes">
+                        Modelle repraesentieren, <br />bzw. das Modell repraesentiert<br /> Wissen bzw. aufbereitete oder strukturierte Daten.<br /> Ein Modell kann ein einziges Objekt sein<br />(eher uninteressant),
+                        <br /> oder es ist eine Struktur aus mehreren Objekten.
+                        <br />Es sollte einerseits eine "Eins zu Eins"-Korrespondenz zwischen dem Modell und seinen Teilen auf der einen Seite<br /><br />
+                        und der vom Eigentuemer als Entitaet wahrgenommenen Repraesentation auf der anderen Seite geben.<br /><br />
+                        Es sollte also auch die Business-Logic enthalten, <br /> auch wenn einige Menschen dazu tendieren diesen Fakt zu leugnen <br />und selbige mittels Dependency-Injection**<br /> zu implementieren.
+                        lassen sie uns kurz ansehen was Erfinder der Objektorientierten Programmierung zu Modellen ohne Logik sagen: XLINKX.
+                        Ich fasse zusammen, wir haben im Modell zugriff auf:<br />
+                        -die Daten bzw. das Datenmodell<br />
+                        -Business Logic<br />
+                        =>Logik zur Modell-Zustandsveraenderung <br />
+                        und zur Mitteilung des Zustands der Daten<br />
+                        &emsp;&emsp;(bzw. ihrer Veraenderung) an alle  eingeschriebenen Teilnehmer <br />bzw. den Controller<br /><br />
+                        **(externe Libraries)
+                        >>>>!!!!!!!!!!!LINK!!!!!!!!!!!!!!!
+                    </aside>
+                </section>
 
                     <section>
                         <h1>VIEW</h1>
@@ -365,473 +646,10 @@
                             ///goto next Page
                         </aside>
                     </section>
-                </section>
-
-
-
-                <section data-background-iframe="https://www.youtube.com/embed/qLTbfUte1Tc" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                         data-background-interactive>
-
-                    <aside class="notes">
-                        bzw. ein Video dazu...<br /> XXX CLICK pLAY iN MAIn-winDOw!! xxxXXX
-                                              <br />
-                        .. Sie sehen, <br />an dem Punkt wo das Modell dem View mitteilt, <br />dass es sich veraendert hat <br />
-                        und entsprechend angezeigt werden will, <br />passiert das, <br />was hier auf logischer Ebene, <br />
-                        direkt angezeigt wird, <br />in ASP.net MVC <br /> mittels dem Controller.
-                    </aside>
-                </section>
-
-                <!--SELFCALL to -> Filmierung.APP-->
-                <section data-background-iframe="http://localhost:58144/Home"
-                         data-background-interactive>
-                    <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-                        <h2>ASP.net MVC </h2>
-                        <p>
-                            Take a byte!
-                        </p>
-                    </div>
-                    <aside class="notes">
-                        Wie sagt der Koch so schoen? Ich hab hier schon mal was vorbereitet: <br />    
-                        Innerhalb meiner Applikation die ich zu Schulungszwecken noch weiterentwickeln werde, <br />
-                        habe ich eine FAQ - Seite angelegt,<br /> wo wir uns ansehen koennen, <br />wie die Applikation selbst funktioniert.<br />
-                                                                                                                                            <br />
-                        xxx FAQ - Seite innerhalb Applikation oeffnen <br />-->Info--  xxxXXX
-                        <br />
-                        <br />
-                        Hier sieht man auch gleich mal ein quasi-statisches Modell, also ein Modell das nur innerhalb der Applikation existiert und nicht an eine Datenbank gebunden wird, so wie das halt in diversen Schulungsbeispielen zum MVC Framework anfangs gemacht wird.
-                        Kann aber auch schoen die Folder-Struktur eines ASP.NET-MVC Projekts sehen.
-
-                        -CLICK LightboxPopUp - BLACK-X
-
-                        Da sich unsere Schulung ja hauptsaechlich um ASP.NET MVC dreht, moechte auch das ASP.NET MVC Konzept noch ein wenig erlaeutern und komme damit wieder zur Aussage der ersten Seite:
-                        Die Flexibilitaet die natuerlich gewuenscht und gewollt ist, welche uns das ASP.NET Framework offeriert,
-                        kann
-                        natuerlich SoC bzw. SRP und das MVC Muster verletzen, wenn bspw.:
-                        -PAUSE ENDE
-                    </aside>
-                </section>
-
-                <section>
-                    <h2>ASP.NET-MVC</h2>
-
-
-
-                    <section>
-                        <!--viewbag-->
-                        <h2>
-                            <span class="fragment highlight-red">VIEWBAG-Problematik</span>
-                        </h2>
-                        <pre><code class="hljs" data-trim data-line-numbers="1|4|7|8|4,8">
-        //controller
-        public ActionResult Index()   
-        {  
-            ViewBag.EmployeeData = getEmplyees(x => x.DOB > DateTime.Now);  
-        }
-          
-        // view  
-        @@foreach(var employee in ViewBag.EmployeeData)  
-        {  
-        // using data;
-        // for showing data;  
-        }
-					</code></pre>
-                        <aside class="notes">
-                            eigentlich ein (View)Model(welches ich jetzt zum Concern 'Model' zaehlen will) die Daten fuer den View anbieten sollte, aber der Programmierer sich einen
-                            Zauberhut aufsetzt und Ungetueme wie xxxCLICKxxx "ViewBag"(welches ohne Reflektion daherkommt) oder  "ViewData" verwendet.
-                            So wie es im gezeigten Beispiel zu sehen ist.
-                        </aside>
-                    </section><!--viewbag end-->
-
-                    <section>
-                        <!--business-logic-->
-
-                        <h2>
-                            <span class="fragment highlight-red">BusinessLogic-Problematik</span>
-                        </h2>
-                        <pre><code class="hljs" data-trim data-line-numbers="1|4|1-9">
-        //controller
-            Public ActionResult Save(Employee model)  
-            {  
-                If(ModelState.IsValid)   
-                {  
-                    _dbContext.Employees.Add(model)  
-                }  
-                Return RedirectToAction(“Success”);  
-            }
-					</code></pre>
-                        <aside class="notes">
-                            oder aber wenn die Business Logic<br />
-                            xxxCLICKxxx<br />
-                            (Kommunikation mit Datenablage/Datenbank oder AblegeLogik), <br />welche eigentlich auch im Model zuhause sein sollte, <br />
-                            wie hier im Controller ausgefuehrt ist...<br />
-                            ---
-                            womit der Programmierer dann das SRP("Separation of Responsibility"-Prinzip)
-                            verletzen wuerde.
-                        </aside>
-                    </section> <!--business-logic end-->
-                    <section>
-                        <!--RAZOR-->
-                        <h2>
-                            <span class="fragment highlight-red">RAZOR-Problematik</span>
-                        </h2>
-                        <!--vorsicht kontrollieren ob es funktioniert einen highlighting-step freizulassen-->
-                        <pre><code class="hljs" data-trim data-line-numbers="1||2-9">
-        //view
-        @@if(user.Role == ”Admin”)  
-        {  
-            //  dann setze oder zeige Admin-Usern dies oder das
-        }  
-        @@else   // oder zeige den anderen
-        {  
-            //  normalen Content
-        }  
-					</code></pre>
-                        <aside class="notes">
-                            auch mit Razor haben schon viele Zauberer der Scheibenwelt das MVC Modell blutend am Boden liegen gelassen...
-                            Wie klar wird wenn man sich ansieht, dass folgender Code im View:<br />
-                            ←← vielleicht auch gar nicht SO unueblich ist...
-                        </aside>
-                    </section> <!--RAZOR end-->
 
                 </section>
 
-                <section>
-                    <h2>ASP.NET MVC</h2>
-                    <section>
-                        <p>&emsp;</p>
-                        <img src="../../Content/Images/MVC_DiagramSelf.png" alt="Diagramm zu ASP.NET" style="border:none;" />
 
-                        <aside class="notes">
-                            Und so kann man sich jetzt die Kommunikation im ASP.NET MVC vorstellen:
-                            Der User stellt eine Anfrage ueber die View, <br />
-                            die View macht eine Anfrage an den Controller, <br />
-                            welcher dann die angeforderten Updates <br />an das Model weiterleitet, <br />
-                            welches dann wiederum dem Controller mitteilt,<br /> dass es das Update fertig ausgefuehrt hat,<br />
-                            bzw. zum Controller "RETURNED" also retourniert.<br />
-                            Der Controller gibt dann schliesslich die durchgefuehrten Updates<br />an die View weiter.<br />
-                            Welche sie fuer den Benutzer aufbereitet und anzeigt.
-                        </aside>
-                    </section>
-                </section>
-
-                <section>
-                    <!--ASP.NET Vorstellung Ende-->
-                    <!--Resumé-->
-                    <section>
-                        <h2>.WIEDERHOLUNG.</h2>
-                        <p>
-                            <span class="fragment">ist Strukturvorgabe<br>um</span> <br>
-                            <span class="fragment">Programmbereiche<br>in</span>
-                            <br>
-                            <span class="fragment highlight-red">M</span>
-                            <span class="fragment highlight-green">V</span>
-                            <span class="fragment highlight-blue">C</span><br>
-                            <span class="fragment">SO GUT WIE MOEGLICH <br>und</span><br>
-                            <span class="fragment">
-                                EINDEUTIG<br>
-                                voneinander zu trennen.
-                            </span>
-                        </p>
-                        <aside class="notes">
-                            Lassen sie uns ein kleines Resumee ziehen:<br />
-                            Man sieht also deutlich dass MVC eine Strukturvorgabe ist, <br />die es sich zur Aufgabe gemacht hat,<br />
-                            einzelene Programmteile so gut wie moeglich,<br /> EINDEUTIG, <br />voneinander separat zu halten.<br /><br />
-                            was wie Anfangs schon bemerkt mehrere Vorteile mit sich bringt.<br />
-                            BLACKSCREENPAUSEXXX<br />
-                            Aber viele neue Features, <br /> die in .NET eingezogen sind, <br />verleiten dazu diese Grundregeln zu verletzen <br />bzw. koennen gar nur eingesetzt werden, <br />
-                            wenn man willens ist das zu tun.<br />
-                            Dennoch ist das mit der Verletzung des Musters<br /> mittlerweile fast schon Ansichtssache, <br />
-                            wenn man es mit den Ausnahmen von der Regel nicht uebertreibt.<br />
-                            Beispielsweise laesst sich das Model-View-Presenter Modell<br /> oft nicht gut unterscheiden von einer MVC-Architektur...<br />
-                            Womit wir an den Punkt gelangen,<br /> wo ich auch noch ander Muster vorstellen moechte.
-                            XXXBLACKSCREENPAUSE > next slide
-                        </aside>
-                    </section>
-
-                </section>
-                <!--pause bildschirm--> <!--Erklaerung zur Dehnbarkeit des Begriffs-->
-                @*Reveal.addEventListener( 'customevent', function() {
-        Reveal.configure({ controls: true });
-        } );*@
-
-                <section style="color:orange;" data-background="https://thumbs.gfycat.com/WanPointedEarwig-max-1mb.gif">
-                    <h2 style="color:orange;">WEITERE MUSTER:</h2>
-                    <section>
-                        <h2 style="color:red;">MVP</h2>
-                        <p>
-                            <span class="fragment">% noch strengere Trennung der Bereiche.</span><br>
-                            <span class="fragment">% Model und View kommunizieren exklusiv</span><br> <span class="fragment">-> ueber Presenter.</span><br />
-                            <span class="fragment">
-                                <small><a href="https://www.codeproject.com/articles/605662/using-mvp-with-asp-net-web-forms"></a></small>
-                            </span>
-                        </p>
-                        <aside class="notes">
-                            Um die Verwirrung vollstaendig zu machen:<br />
-                            weitere Muster:<br />
-                            … wo man Anfangs das MVP (Model View Presenter) Muster erwaehnen muss,<br /> da es dem MVC am naechsten ist <br />
-                            und ASP.NET-MVC vielleicht auch als MVP eingeordnet werden koennte.<br /><br /> xxx3malCLICKxxx<br />
-                            Wo bei MVP aber eine noch strengere Trennung der Bereiche vorgeschrieben ist, <br />
-                            sowie dass das Model und die View ausschliesslich bzw. <br />exklusiv ueber den Presenter kommunizieren.
-                        </aside>
-                    </section>
-
-                    <section>
-                        <!--EIC-->
-                        <h2 style="color:red;">EBC</h2>
-                        <h3 style="color:orangered;">
-                            <span class="fragment">EIC/Entity-Interface-Control</span><br>
-                            <span class="fragment">
-                                <small>or</small><br>
-                                EBC/Entity-Boundary-Control
-                            </span>
-                        </h3>
-                        <p>
-                            <span class="fragment">Unterschied zu MVC:</span><br>
-                            <span class="fragment">- Controller beherbergt Business-Logic</span><br><span class="fragment">- Interface/Boundary verarbeitet User-Input.</span>
-                        </p>
-                        <aside class="notes">
-                            Ein weiterer Verwandter: <br />
-                            EIC/Entity-Interface-Control<br /> oder xxxCLICKxxx<br />
-                            EBC/Entity-Boundary-Control<br />
-                            Die Aehnlichkeit von EBC zu MVC ist unverkennbar: <br />
-                            Eine Entitaet gehoert zu einem Model, <br />
-                            und Views(also Ansichten)<br />
-                            gehoeren zu Boundaries(Interfaces).<br /><br />
-                            Wie auch immer...<br /> die Rolle eines ECB-Controllers <br />ist doch sehr unterschiedlich zu der eines MVC-Controllers,<br />
-                            da der ECB-Controller auch Business-Logic beherbergt,<br /> was beim MVC EIGENTLICH zum Model gehoert, <br />
-                            waehrend der MVC-Controller user input verarbeitet, <br />was eigentlich in die Verantwortung des Boundary(Interface)
-                            <br />in ECB(EIC) fallen wuerde.
-                            Wobei noch anzumerken ist...<br /> dass der ECB Controler dem SoC Prinzip mehr schmeichelt, <br />
-                            da die BusinessLogic darin, <br /> keinen direkten Bezug zu einer Entitaet <br />bzw. einem Modell haben soll.
-                            http://www.cs.sjsu.edu/~pearce/modules/lectures/ooa/analysis/ecb.htm
-                        </aside>
-                    </section>
-
-                    <section>
-                        <!--PAC-->
-                        <h2 style="color:red;">PAC</h2>
-                        <h3 style="color:orangered;" class="fragment">Presentation-Abstraction-Control</h3>
-                        <p>
-                            <span style="color:orangered;">
-                                <span class="fragment highlight-blue">Anforderungen </span><span class="fragment">-></span>
-                                <span class="fragment highlight-blue">Agenten</span><br><span class="fragment">- Jeder Agent:</span><br>
-                            </span><span class="fragment highlight-green">P</span><span class="fragment">resenter, </span><span class="fragment highlight-red">A</span><span class="fragment">bstraction, </span><span class="fragment highlight-green">C</span><span class="fragment">ontrol</span>
-                        </p>
-                        <aside class="notes">
-                            Ein weiteres Muster, wo ich mich aber kurz halten moechte...<br />
-                            ist PresentationAbstractionControl<br />
-                            kurz:<br /> PAC<br />
-                            Bei Presentation-Abstraction-Control,  xxxCLICKxxx<br /> werden Anforderungen <br />  xxxCLICKxxx auf Agenten verterteilt.<br />
-                            xxxCLICKxxx<br />
-                            Welche sich dann wieder in <br /> xxxCLICKxxx Presenter, <br />
-                            xxxCLICKxxx Abstraction <br />
-                            und   xxxCLICKxxx  Control <br />unterteilen.
-                            Beispiele: Warcraft und WengoPhone
-                        </aside>
-                    </section>
-
-                    <section>
-                        <!--MVVM-->
-                        <h2 style="color:orangered;">MVVM</h2>
-                        <h3 style="color:red;"><span class="fragment">Model-View-ViewModel</span></h3>
-                        <p class="fragment" style="color:orange;">und nicht</p>
-                        <h3><span class="fragment"><span class="fragment highlight-blue">Model-View-View-Model</span></span></h3>
-                        <p>
-                            <span class="fragment">Vorteil:</span>
-                            <span class="fragment">Rollentrennung -> </span><br>
-                            <span class="fragment">UX/UI-Designer</span>
-                            <span class="fragment">|</span>
-                            <span class="fragment">UI/Logic-Programmer</span>
-                        </p>
-                        <aside class="notes">
-                            xxxCLICKxxx  xxxCLICKxxx <br />xxxCLICKxxx xxxCLICKxxx<br />
-                            MVVM erlaubt eine Rollentrennung von UI-Designern und Entwicklern, <br />
-                            wodurch Anwendungsschichten von verschiedenen Arbeitsgruppen entwickelt werden können.<br />
-                            xxx 5 CLICKSxxx <br />
-                            Designer können einen Fokus auf User Experience setzen und Entwickler die UI- und Geschäftslogik schreiben.
-                        </aside>
-                    </section>
-
-                </section>
-
-                <!--section other frameworks than ASP.NET MVC-->
-                <section>
-                    <section data-background="https://media.giphy.com/media/a29uUCryHZkPe/giphy.gif">
-                        <h2 style="color:indianred;">andere MVC FRAMEWORKS:</h2>
-                        <aside class="notes">
-                            aber bevor sie mich jetzt zerfetzen mit Fragen zu anderen Architekturen auf die ich keine Antwort habe>>
-                            lassen sie mich ihnen noch ein paar sehr uebliche MVC Frameworks die heutzutage neben ASP.NET-MVC
-                            zum Einsatz kommen vorstellen.
-                        </aside>
-                    </section>
-
-                    <section data-background-iframe="https://www.larashout.com/what-is-laravel-and-why-you-should-learn-it"
-                             data-background-interactive>
-                        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-                            <h2>Laravel</h2>
-                            <p>
-                                -modulares Packaging System <br />
-                                -Dependency Manager <br />
-                                -Utilities <br />
-                                -Syntactic Sugar
-                            </p>
-                            <aside class="notes">
-                                Bietet:
-                                Ein modulares Packaging-System mit einem dezidiertem Dependency-Manager,
-                                sowie unterschiedliche Moeglichkeiten, relationale Datenbanken und Utilities fuer Deployment und Wartung anzusprechen.
-                                Weiters legt das Framework auch Wert auf "Syntactic Sugar".
-                                Was Bedeutet, dass eine besondere Syntax angeboten wird die vieles vereinfachen soll.
-                            </aside>
-                        </div>
-                    </section>
-                    <section data-background-iframe="https://rubyonrails.org/"
-                             data-background-interactive>
-                        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-                            <h2>Ruby-On-Rails</h2>
-                            <p>
-                                -Programmiersprache: Ruby <br />
-                                -DRY-Prinzip
-                                -Convention before Configuration
-                            </p>
-                            <aside class="notes">
-                                Ruby on Rails, kurz Rails, früher auch oft kurz RoR, ist ein ursprünglich von David Heinemeier Hansson,
-                                in der Programmiersprache Ruby geschriebenes und quelloffenes Webframework.
-                                Rails ist geprägt von den Prinzipien „don’t repeat yourself“ (DRY) und „Konvention vor Konfiguration“:
-                                Das heißt, statt einer variablen Konfiguration sind Konventionen für die Namensgebung von Objekten einzuhalten,
-                                aus denen sich deren Zusammenspiel automatisch ergibt.
-                                Diese Funktionen ermöglichen eine rasche Umsetzung von Anforderungen.
-                            </aside>
-                        </div>
-                    </section>
-                    <section data-background-iframe="https://sailsjs.com"
-                             data-background-interactive>
-                        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-                            <h2>Sails.JS</h2>
-                            <p>
-                                -entwickelt mit Node.js
-                                -MIT-Lizenz
-                                -Ergaenzung zu node.js
-                            </p>
-                            <aside class="notes">
-                                Sails.js ist ein MVC-WebApp Framework welches mit dem Node.JS Environement entwickelt wurde,
-                                und ist unter der MIT-Lizenz als freie Software verfuegbar.
-                                Es wurde mit dem Ziel geschrieben, die Entwicklung von kommerziellen Node.JS WebApps und APIs zu vereinfachen.
-                            </aside>
-                        </div>
-                    </section>
-
-                    <section data-background="https://cdn.iwastesomuchtime.com/822012231911whenmygirlfriendsaysweneedtotalk.gif"><h2 style="color:red;">... bevor wir den Rahmen sprengen,<br>rekapitulieren wir ein letztes Mal...</h2></section>
-                    <h2 style="color:dimgray">ABSCHLIESSEND NOCH:</h2>
-                </section>
-
-                <section>
-                    <section>
-                        <h2>
-                            BESTAND<span class="fragment">T</span><span class="fragment">E</span><span class="fragment">I</span><span class="fragment">L</span><span class="fragment">E</span>
-                        </h2>
-                        <p>Aufteilung in:</p>
-                        <br />
-                        <a href="#" class="navigate-down">
-                            <img style="border:none; background-color:none;"
-                                 width="178"
-                                 height="238"
-                                 data-src="../../Content/Images/mvcPres_arrow.png"
-                                 alt="Down arrow" />
-                        </a>
-                        <aside class="notes">
-                            Die Bestand- xxx!5CLICKsxxx -teile <br />
-                            von MVC sind genau so definiert,<br />
-                            wie zuvor erwaehnt,<br />
-                            aber fassen wir nochmal kurz zusammen:
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>MODEL:</h2>
-                        <p>
-                            <span class="fragment"><u>ist:</u> </span><br>
-                            <span class="fragment">-WISSEN </span>
-                            <br /> <span class="fragment">-STRUKTURIERTE DATEN </span>
-                            <br /><span class="fragment">&ensp;*Objekt</span>
-                            <br /><span class="fragment">&ensp;*Struktur aus mehreren Objekten</span>
-
-
-                        </p>
-                        <p>
-                            <span class="fragment"><u>bietet: </u></span><br /><span class="fragment">Information/Kommunikation: </span><span class="fragment">MODEL->VIEW</span>
-                            <br /><span class="fragment">Business Logic(Modell-Logik/Methoden)</span>
-                        </p>
-                        <aside class="notes">xxxx laut FOLIE xxxx</aside>
-                    </section>
-                    <section>
-                        <h2>VIEW</h2>
-                        <p>
-                            <span class="fragment"><u>macht:</u> </span><br>
-                            <span class="fragment">-RAEPRESENTATION </span><br><span class="fragment">-STRUKTURIERTE ANSICHT der DATEN</span>
-                            <br /><small>
-                                <span class="fragment">&ensp;*...hebt hervor</span>
-                                <br /><span class="fragment">&ensp;*...blendet aus</span>
-                                <br /><span class="fragment">&emsp;&emsp;&emsp;&emsp;*...sendet Nachrichten</span>
-                            </small>
-                        </p>
-                        <p>
-                            <span class="fragment"><u>ist:</u> </span><br /><span class="fragment">
-                                AnsichtsFilter<br />
-                                UserInterface
-                            </span>
-
-                        </p>
-                        <aside class="notes">xxxx laut FOLIE xxxx</aside>
-                    </section>
-                    <section>
-                        <h2>CONTROLLER</h2>
-                        <p>
-                            <span class="fragment"><u>bedeutet:</u> </span><br />
-                            <span class="fragment">-VERBINDUNG </span><br />
-                            <span class="fragment">-INFORMATIONSAUFBEREITUNG</span>
-                            <br>
-                            <span class="fragment">
-                                &ensp;*Schnittstelle<br />
-                                &ensp;*Uebersetzer/Umwandler <br>
-                            </span>
-                            <span class="fragment"><small>(im Datenstrom/Datenaustausch)</small></span>
-                        </p>
-                        <p>
-                            <span class="fragment">&ensp;<u>bietet also:</u></span> <br />
-                            <span class="fragment">Input-Handling</span><br /><span class="fragment">Application-Logic</span>
-                            <br /><span class="fragment">CRUD-Logic</span>
-                        </p>
-                        <aside class="notes">xxxx laut FOLIE xxxx</aside>
-                    </section>
-                </section>
-
-                <section>
-                    <h2 class="fragment">AMBIVALENZ<br>in <span style="color:red;">MVC</span></h2>
-                    <p><span class="fragment">- Gesamtkonzept</span>
-                    <p><span class="fragment">- Teilsystem</span>
-                    <p><span class="fragment">- Grundidee</span>
-                    <p>
-                        <span class="fragment">- ebenfalls eher Strukturvorgaben</span>
-                        <br><span class="fragment">- schwierig von MVP zu unterscheiden</span>
-                        <br><span class="fragment">-> RAD</span>
-                    </p>
-                    <aside class="notes">
-                        Natuerlich ergiebt sich bei MVC-Frameworks und auf MVC basierenden Anwendungen,
-                        immer eine gewisse Ambivalenz.
-                        Und auch viele weitere Muster wie MVC sind ebenfalls eher Strukturvorgaben,
-                        als Regeln die zu 100% auf "Biegen und Brechen" einzuhalten sind.
-                        Daher wird es auch bei diesen eventuell Verletzungen geben
-                        oder Schwierigkeiten wie bspw. das vom MVC abgeleitete MVP Muster eindeutig von MVC zu unterscheiden.
-                        Sie koennen aber dennoch eine gute Stuetze fuer RAB/RAD Projekte sein, <br />
-                        xxx SCROLLtoBOTTOM XXX <br />
-                        wenn man sich so exakt wie moeglich,<br />
-                        an die Definitionen haelt, <br />die als passend fuer das verwendete Muster festgelegt wurden.
-
-                        Abschliessend nochmal die Meinung eines Wikipedia-Autors zur Ambivalenz des Begriffs 'MVC':
-                        Die Begriffe des ursprünglichen MVC-Musters werden heute oft entlehnt, um Systeme begreiflich zu machen, die weitaus komplexer sind als die damalige Software. Dabei kommt es auf die Perspektive des betrachteten Teilsystems an, welche Elemente damit bezeichnet werden.
-                        Somit laesst sich schliessen:
-                        Die Grundidee der Trennung von Model, View und Controller hat sich erhalten, wird aber feiner granuliert und verschachtelt eingesetzt.
-                    </aside>
-                </section>
                 <section>
                     <h2><span class="fragment">DANKE!</span></h2>
                     <p><span class="fragment">fuer Ihre Zeit</span></p>
@@ -878,24 +696,25 @@
                 </section>
 
                 <section>
-                    <h1>!<a href="#/10/1">BUSINESS OBJECTS</a>!</h1>
+                    <h1>!<a href="#/16/1">BUSINESS OBJECTS</a>!</h1>
                     <h1>=></h1>
                     <h1>BUSINESS LOGIC</h1>
-                    <aside class="notes">zum Begriff Business Logic, <br />
-                    muss man auch noch sagen: <br />
-                    Dass dieser mittlerweile zum gefluegelten Wort geworden ist <br />
-                    und man damit oft "Business Logic" und "Business Rules" <br />
-                    gemeinsam erwaehnt bzw. meint. <br />
-                    Auch wenn das von der Semantik her <br />
-                    2 verschiedene Dinge sind. <br /><br />
-                    Und Business Rules eigentlich den Aufbau <br />
-                    von Geschaeftsobjekten aus dem echten Leben definieren...<br />
-                    (Kredit, Inventar, Leihe, Konto) <br />
-                    Waehrend die Business Logic beschreibt, <br />
-                    wie die Objekte miteinander agieren sollen <br />
-                    oder vorschreibt, mit welchen Methoden <br />
-                    oder auf welchen Wegen die Geschaeftsobjekte veraendert bzw. <br />
-                    auf diese zugegriffen werden darf.
+                    <aside class="notes">
+                        zum Begriff Business Logic, <br />
+                        muss man auch noch sagen: <br />
+                        Dass dieser mittlerweile zum gefluegelten Wort geworden ist <br />
+                        und man damit oft "Business Logic" und "Business Rules" <br />
+                        gemeinsam erwaehnt bzw. meint. <br />
+                        Auch wenn das von der Semantik her <br />
+                        2 verschiedene Dinge sind. <br /><br />
+                        Und Business Rules eigentlich den Aufbau <br />
+                        von Geschaeftsobjekten aus dem echten Leben definieren...<br />
+                        (Kredit, Inventar, Leihe, Konto) <br />
+                        Waehrend die Business Logic beschreibt, <br />
+                        wie die Objekte miteinander agieren sollen <br />
+                        oder vorschreibt, mit welchen Methoden <br />
+                        oder auf welchen Wegen die Geschaeftsobjekte veraendert bzw. <br />
+                        auf diese zugegriffen werden darf.
 
 
 
@@ -906,22 +725,7 @@
                     <p class="notesbatch"></p>
                 </section>
 
-                <section data-state="customevent">
-                    <h2>TODO(for final presentation):</h2>
-                    <h1>State Events</h1>
-                    <p>
-                        Additionally custom events can be triggered on a per
-                        slide basis by binding to the
-                        <code>data-state</code> name. <br>
-                        see on the bottom of this file...
-                    </p>
-                    
-                    <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-                </section>
+                
             </div>
         </div>
 

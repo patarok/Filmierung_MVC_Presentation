@@ -10646,7 +10646,7 @@ return jQuery;
     fitImagesInViewport: true,
     imageFadeDuration: 600,
     // maxWidth: 800,
-    // maxHeight: 600,
+    maxHeight: 800,
     positionFromTop: 50,
     resizeDuration: 700,
     showImageNumberLabel: true,
